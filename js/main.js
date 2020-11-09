@@ -30,7 +30,7 @@ function showForm() {
 }
 
 function hideForm () {
-  document.getElementById(`log`).style.visibility = 'hidden';
+  document.getElementById(`log`).style.display = 'none';
 }
 
 let form = document.forms.user;
