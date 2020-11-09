@@ -8,7 +8,7 @@ var list = [{
 ];
 
 function registration(){
-  let log = document.getElementById("login").value;
+  let log = document.getElementById("loginGen").value;
   let fuck = false
   list.forEach((item, i, arr) =>{
         if (item.login === log)
@@ -16,15 +16,22 @@ function registration(){
           fuck = true}})
   if (fuck) return     
 list.push({
-    login: document.getElementById("login").value,
-    password: document.getElementById("pass").value,
-    codeWord: document.getElementById("codeWord").value
+    login: document.getElementById("loginGen").value,
+    password: document.getElementById("passGen").value,
+    codeWord: document.getElementById("codeWordGen").value
 });
 }
 function showUser (){
   return console.log(list)
 }
 
+function showForm() {
+  document.getElementById('logGeneration').style.visibility = 'visible'
+}
+
+function hideForm () {
+  document.getElementById(`log`).style.visibility = 'hidden';
+}
 
 let form = document.forms.user;
 //let elem = form.elements.userName;
