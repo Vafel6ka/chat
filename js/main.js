@@ -51,14 +51,24 @@ function mainField (){
   logGeneration.style.display = 'none'; 
   logForm.style.display = 'none';
   
+  let box = document.createElement('div')
+  box.className = "box";
+  
   let chatBox = document.createElement('div');
   chatBox.className = "chatBox";
+  chatBox.id = 'chatBox';
   chatBox.innerHTML = "<strong>Тоха любить Олю!</strong> Вы прочитали важное сообщение.";
+  
+  let ipt = document.createElement('input')
+  ipt.className = "ipt";
+  
   let msgBtn = document.createElement('div')
-  msgBtn.className = "msgBtn";
+  msgBtn.id = "msgBtn";
   msgBtn.innerHTML = "<strong>Enter msg</strong>"
-  document.body.append(chatBox);
-  document.body.append(msgBtn);
+  document.body.append(box);
+  box.prepend(chatBox, ipt, msgBtn)
+ 
+  addMsg();
 }
 function logInField (){
   logForm.style.display = 'block'; 
@@ -70,3 +80,12 @@ function regField() {
   logForm.style.display = 'none';
 }
 
+function addMsg (){
+  
+   msgBtn.ontouchend = function () {
+     let text = document.getElementsByName(`ipt`).value;
+     let boxx = document.getElementById(`chatBox`)
+     let msgg = document.createElement('div');
+    msgg.innerHTML = `${text}`;
+    boxx.append(msgg);
+}}
