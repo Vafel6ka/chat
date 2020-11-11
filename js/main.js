@@ -53,7 +53,7 @@ function mainField (){
   
   let chatBox = document.createElement('div');
   chatBox.className = "chatBox";
-  chatBox.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+  chatBox.innerHTML = "<strong>Тоха любить Олю!</strong> Вы прочитали важное сообщение.";
   let msgBtn = document.createElement('div')
   msgBtn.className = "msgBtn";
   msgBtn.innerHTML = "<strong>Enter msg</strong>"
