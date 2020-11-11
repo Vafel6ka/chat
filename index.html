@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css" />
   <title></title>
 </head>
 
 <body>
+  <div class="wrapper">
+  <div id="logForm">
   <form id="log">
       <label>Login:
     <input type='text' id="logIn" placeholder="press enter your login">
@@ -15,34 +18,40 @@
   <br>
   <br>
   <label>Pass:
-    <input type='text' id="passIn" placeholder="press enter your pass">
+    <input type='password' id="passIn" placeholder="press enter your pass">
   </label>
   <br>
   <br>
-    <button type="button" onclick="showForm(), hideForm()">Log in</button>
+<div id="btn1">
+    <button type="button" onclick="logInn()">Log in</button>
+    <button type="button" onclick="regField()">Registration</button>
+  </div>
    <br>
   <br>
   </form>
+  </div>
   
-  <form id='logGeneration' style="visibility: hidden">
+  <form id='logGeneration' style="display: none">
   <label>Login:
     <input type='text' name='logGen' id="logGen" placeholder="press enter your login">
   </label>
   <br>
   <br>
   <label>Pass:
-    <input type='text' name='passGen' id="passGen" placeholder="press enter your pass">
+    <input type='password' name='passGen' id="passGen" placeholder="press enter your pass">
   </label>
   <br>
   <br>
-  <label>Login:
+  <label>Secret word:
     <input type='text' name='codeWordGen' id="codeWordGen" placeholder="press enter your code's word">
   </label>
   <br>
   <br>
   <button type="button" onclick="registration()">Registration</button>
   <button type="button" onclick="showUser()">Show last user</button>
+  <button type="button" onclick="logInField()">back</button>
     </form>
+    </div>
   <script src="js/main.js"></script>
 </body>
 
