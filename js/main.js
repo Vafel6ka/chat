@@ -61,6 +61,7 @@ function mainField (){
   
   let ipt = document.createElement('input')
   ipt.className = "ipt";
+  ipt.id = `ipt`;
   
   let msgBtn = document.createElement('div')
   msgBtn.id = "msgBtn";
@@ -83,9 +84,10 @@ function regField() {
 function addMsg (){
   
    msgBtn.ontouchend = function () {
-     let text = document.getElementsByName(`ipt`).value;
+     let text = document.getElementById(`ipt`).value;
      let boxx = document.getElementById(`chatBox`)
      let msgg = document.createElement('div');
-    msgg.innerHTML = `${text}`;
+    msgg.innerHTML = `<strong> ${text} </strong>`
     boxx.append(msgg);
+    console.log(text)
 }}
